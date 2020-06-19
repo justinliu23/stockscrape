@@ -1,7 +1,7 @@
-# Stock Manager
+# **Stock Manager**
 
-## tracker.py
-* Personalize a clipboard of stocks to track based on [Yahoo! Finance](https://finance.yahoo.com/) (refer to line 11 for example)
+## **tracker.py**
+* **Personalize** a clipboard of stocks to track based on [Yahoo! Finance](https://finance.yahoo.com/) (refer to line 11 for example)
 
 * Notifies you via email if a stock on your clipboard falls or rises over 5% of your buying price
 
@@ -15,6 +15,7 @@
 
 ## Automating the Script
 * Automating `main.py` to notify you via email requires 2 steps:
+
   1. [Convert](https://www.youtube.com/watch?v=UZX5kH72Yx4&list=LLn2A3GlJT_vthodJ8G63-gA&index=3&t=303s) your python script (.py) to an executable file (.exe)
   2. Open Windows Task Scheduler and (schedule a new task)[https://windowsreport.com/schedule-tasks-windows-10/] with the generated .exe file in the Actions tab - scheduling other parts of the task are based on personal preferences
   
