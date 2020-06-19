@@ -1,7 +1,7 @@
 # Stock Manager
  Tracks and Views Stocks
 
-* Personalize a clipboard of stocks to track
+* Personalize a clipboard of stocks to track on [Yahoo! Finance](https://finance.yahoo.com/)
 * Notifies you via email if a stock falls or rises over 5% of the buying price
 * Receiving emails requires 4 steps:
   1. Enabling Google 2-Step Verification
