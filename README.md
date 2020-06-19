@@ -1,4 +1,4 @@
-# stock manager
+# Stock Manager
  Tracks and Views Stocks
 
 * Personalize a clipboard of stocks to track
