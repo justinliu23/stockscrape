@@ -1,7 +1,7 @@
 # **Stock Manager**
 
 ## tracker.py
-* Personalize a clipboard of stocks to track based on [Yahoo! Finance](https://finance.yahoo.com/) (refer to line 10 for example)
+* Personalize a clipboard of stocks to track based on [Yahoo! Finance](https://finance.yahoo.com/) (refer to line 11 for example)
 
 * Notifies you via email if a stock on your clipboard falls or rises over 5% of your buying price
 
@@ -14,7 +14,7 @@
 * Run `main.py` after you personalize your email login information and clipboard of stocks to use.
   
 ## viewer.py
-* Personalize a clipboard of stocks to quickly and easily view their prices (refer to line 7 for example)
+* Personalize a clipboard of stocks to quickly and easily view their prices (refer to line 11 for example)
 
 * To view any stock's price, simply enter the stock's symbol
 
