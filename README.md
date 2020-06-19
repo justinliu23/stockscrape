@@ -11,7 +11,7 @@
   3. Change the sample email addresses (someone@example.com) to your email
   4. Insert your generated Google App Password where it says, `Insert your password here`
   
-* Run `main.py` after you personalize your email login information and clipboard of stocks to use
+* Run `main.py` after you personalize your email login information and clipboard of stocks to use.
   
 ## viewer.py
 * Personalize a clipboard of stocks to quickly and easily view their prices (refer to line 11 for example)
