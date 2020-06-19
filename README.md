@@ -13,9 +13,7 @@
   
 * Run `main.py` after you personalize your email login information and clipboard of stocks to use
 
-##### Automating the Script
 * Automating `main.py` to notify you via email requires 2 steps:
-
   1. [Convert](https://www.youtube.com/watch?v=UZX5kH72Yx4&list=LLn2A3GlJT_vthodJ8G63-gA&index=3&t=303s) your python script (.py) to an executable file (.exe)
   2. Open Windows Task Scheduler to [schedule a new task](https://windowsreport.com/schedule-tasks-windows-10/) with the generated .exe file in the Actions tab - scheduling other parts of the task are based on personal preferences
   
