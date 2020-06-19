@@ -15,7 +15,7 @@
 
 ## Automating the Script
 * Automating `main.py` to notify you via email requires 2 steps:
-  1. test (Convert)[https://www.youtube.com/watch?v=UZX5kH72Yx4&list=LLn2A3GlJT_vthodJ8G63-gA&index=3&t=229s] your python script (.py) to an executable file (.exe)
+  1. test (Convert)[https://www.youtube.com/watch?v=JRCJ6RtE3xU] your python script (.py) to an executable file (.exe)
   2. Open Windows Task Scheduler and (schedule a new task)[https://windowsreport.com/schedule-tasks-windows-10/] with the generated .exe file in the Actions tab - scheduling other parts of the task are based on personal preferences
   
 ## viewer.py
