@@ -7,7 +7,6 @@
   2. Generating a Google App Password for your Gmail account
   3. Changing the sample email addresses (someone@example.com) to your email
   4. Inserting your generated Google App Password for your Gmail account where it says, 'Insert your password here'
-
 ## Stock Viewer
 * Personalize a clipboard of stocks to quickly and easily view their prices
 * To view any stock's price, simply enter the stock's symbol
