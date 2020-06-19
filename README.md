@@ -13,5 +13,6 @@
   
 ## Stock Viewer
 * Personalize a clipboard of stocks to quickly and easily view their prices
+
 * To view any stock's price, simply enter the stock's symbol
   
