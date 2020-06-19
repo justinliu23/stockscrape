@@ -1,5 +1,4 @@
 # **Stock Manager**
-
 ## Stock Tracker
 * Personalize a clipboard of stocks to track based on [Yahoo! Finance](https://finance.yahoo.com/)
 * Notifies you via email if a stock on your clipboard falls or rises over 5% of your buying price
