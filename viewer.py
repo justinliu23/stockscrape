@@ -8,15 +8,20 @@ BUY_PRICE = "buy price"
 # - Email notifications will be sent for the newly added stock
 stocks_clipboard = \
     {
-        1: {NAME: 'AAPL', BUY_PRICE: 351.76},
-        2: {NAME: 'AMZN', BUY_PRICE: 2653.98},
-        3: {NAME: 'BA'  , BUY_PRICE: 160.54},
-        4: {NAME: 'FB'  , BUY_PRICE: 235.53},
+        1: {NAME: 'AAPL', BUY_PRICE: 331.76},
+        2: {NAME: 'AMZN', BUY_PRICE: 2600.98},
+        3: {NAME: 'BA'  , BUY_PRICE: 190.54},
+        4: {NAME: 'FB'  , BUY_PRICE: 232.53},
         5: {NAME: 'GOOG', BUY_PRICE: 1435.96},
         6: {NAME: 'INTC', BUY_PRICE: 60.49},
         7: {NAME: 'MSFT', BUY_PRICE: 194.24},
         8: {NAME: 'NVDA', BUY_PRICE: 369.44},
-        9: {NAME: 'TSLA', BUY_PRICE: 1000.00},
+        9: {NAME: 'TSLA', BUY_PRICE: 970.00},
+        10: {NAME: 'AMD', BUY_PRICE: 55.00},
+        11: {NAME: 'UAL', BUY_PRICE: 40.00},
+        12: {NAME: 'NUGT', BUY_PRICE: 65.38},
+        13: {NAME: 'XOM', BUY_PRICE: 40.00},
+        14: {NAME: 'PLUG', BUY_PRICE: 5.00},
     }
 
 
@@ -50,7 +55,7 @@ def display_stock_price(stock_url):
     print('Current Price of ' + stock + ': ' + '$' + current_stock_price)
 
 
-# Prints the price of a stock based on any stock URL for Yahoo! Finance
+# Allows the user to pick any stock from the clipboard to view the price of
 def pick_stocks():
     print('--------')
     for i in range(len(stocks_clipboard)):
@@ -71,14 +76,18 @@ def pick_stocks():
         print('Invalid input.')
 
 
+
+# Prints the price of any stock based on the stock symbol
 def enter_stock():
     print('Stock Name:')
     stock = input().upper()
-    stock_url = 'https://finance.yahoo.com/quote/' + stock + '?p=' + stock + '&.tsrc=fin-srch'
+    stock_url = get_stock_url(stock)
 
     display_stock_price(stock_url)
 
 
+# - Allows the user to pick any stock from the clipboard to view the price of
+# - Prints the price of any stock based on the stock symbol
 def view_stocks():
     print('\n****************************')
     print('| Pick Stocks          [1] |')
@@ -96,8 +105,14 @@ def view_stocks():
         print('Invalid input.')
 
 
-continue_viewing = 'y';
-while continue_viewing.casefold() == 'y':
-    view_stocks()
-    print('\nView another stock? [Y/N]')
-    continue_viewing = input()
+# Calls view_stocks() in a loop controlled by the user
+def main():
+    continue_viewing = 'y';
+    while continue_viewing.casefold() == 'y':
+        view_stocks()
+        print('\nView another stock? [Y/N]')
+        continue_viewing = input()
+
+
+if __name__ == "__main__":
+    main()
