@@ -4,20 +4,25 @@ import smtplib
 
 NAME = "name"
 BUY_PRICE = "buy price"
-# - Personal clipboard in which you can edit.
+# - Personal stocks clipboard in which you can edit
 # - Any changes will be reflected accordingly in the program
 # - Email notifications will be sent for the newly added stock
 stocks_clipboard = \
     {
-        1: {NAME: 'AAPL', BUY_PRICE: 351.76},
-        2: {NAME: 'AMZN', BUY_PRICE: 2653.98},
-        3: {NAME: 'BA'  , BUY_PRICE: 160.54},
-        4: {NAME: 'FB'  , BUY_PRICE: 235.53},
-        5: {NAME: 'GOOG', BUY_PRICE: 1435.96},
-        6: {NAME: 'INTC', BUY_PRICE: 60.49},
-        7: {NAME: 'MSFT', BUY_PRICE: 194.24},
-        8: {NAME: 'NVDA', BUY_PRICE: 369.44},
-        9: {NAME: 'TSLA', BUY_PRICE: 1000.00},
+        1:  {NAME: 'AAPL', BUY_PRICE: 331.76},
+        2:  {NAME: 'AMZN', BUY_PRICE: 2600.98},
+        3:  {NAME: 'BA'  , BUY_PRICE: 190.54},
+        4:  {NAME: 'FB'  , BUY_PRICE: 232.78},
+        5:  {NAME: 'GOOG', BUY_PRICE: 1435.96},
+        6:  {NAME: 'INTC', BUY_PRICE: 60.53},
+        7:  {NAME: 'MSFT', BUY_PRICE: 194.24},
+        8:  {NAME: 'NVDA', BUY_PRICE: 369.49},
+        9:  {NAME: 'TSLA', BUY_PRICE: 970.42},
+        10: {NAME: 'AMD' , BUY_PRICE: 55.21},
+        11: {NAME: 'UAL' , BUY_PRICE: 40.96},
+        12: {NAME: 'NUGT', BUY_PRICE: 65.38},
+        13: {NAME: 'XOM' , BUY_PRICE: 40.37},
+        14: {NAME: 'PLUG', BUY_PRICE: 5.51},
     }
 
 
@@ -49,8 +54,8 @@ def check_price_fall():
         current_stock_price = float(get_current_stock_price(stock_url).replace(',', ''))
 
         if current_stock_price < (fallen_price_factor * stock_buy_price):
-            print('Email sent: ' + stock + ' fell below 5% of your buying price.')
             send_fallen_price_email(stock, stock_buy_price)
+            print('Email sent: ' + stock + ' fell below 5% of your buying price.')
 
 
 # Checks if any stock on the clipboard rose above 5% of the buying price
@@ -64,8 +69,8 @@ def check_price_rise():
         current_stock_price = float(get_current_stock_price(stock_url).replace(',', ''))
 
         if current_stock_price > (risen_price_factor * stock_buy_price):
-            print('Email sent: ' + stock + ' rose above 5% of your buying price.')
             send_risen_price_email(stock, stock_buy_price)
+            print('Email sent: ' + stock + ' rose above 5% of your buying price.')
 
 
 # Sends an email to a specified email address if any stock on the clipboard fell below 5% of the buying price
@@ -88,8 +93,8 @@ def send_fallen_price_email(stock, stock_buy_price):
     smtp.starttls()
 
     sending_email = 'someone@example.com'
-    receiving_emails = ['someoneelse1@example.com', 'someoneelse2@example.com', 'someoneelse3@example.com']
-    password = 'Insert your password here'
+    receiving_emails = ['someone@example.com', 'someone@example.com', 'someone@example.com']
+    password = 'Insert your generated Gmail App Password here'
     smtp.login(sending_email, password)
 
     subject = 'Stock Price Fall: ' + stock
@@ -126,8 +131,8 @@ def send_risen_price_email(stock, stock_buy_price):
     smtp.starttls()
 
     sending_email = 'someone@example.com'
-    receiving_emails = ['someoneelse1@example.com', 'someoneelse2@example.com', 'someoneelse3@example.com']
-    password = 'Insert your password here'
+    receiving_emails = ['someone@example.com', 'someone@example.com', 'someone@example.com']
+    password = 'Insert your generated Gmail App Password here'
     smtp.login(sending_email, password)
 
     subject = 'Stock Price Rise: ' + stock
@@ -145,7 +150,7 @@ def send_risen_price_email(stock, stock_buy_price):
 
 
 # - Tracks all stocks on the clipboard
-# - Sends email notifications if the current price changed by 5% or more from the buying price.
+# - Sends email notifications if the current price changed by 5% or more from the buying price
 def track_stocks():
     check_price_fall()
     check_price_rise()

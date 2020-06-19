@@ -3,9 +3,8 @@ from bs4 import BeautifulSoup
 
 NAME = "name"
 BUY_PRICE = "buy price"
-# - Personal clipboard in which you can edit.
+# - Personal stocks clipboard in which you can edit
 # - Any changes will be reflected accordingly in the program
-# - Email notifications will be sent for the newly added stock
 stocks_clipboard = \
     {
         1: {NAME: 'AAPL', BUY_PRICE: 331.76},
