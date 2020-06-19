@@ -9,7 +9,7 @@
   1. Enable [Google 2-Step Verification](https://support.google.com/accounts/answer/185839?co=GENIE.Platform%3DAndroid&hl=en)
   2. Generate a [Google App Password](https://support.google.com/accounts/answer/185833?hl=en) for your Gmail account
   3. Change the sample email addresses (someone@example.com) to your email
-  4. Insert your generated Google App Password where it says, "Insert your password here"
+  4. Insert your generated Gmail App Password where it says, "Insert your password here"
   
 * Run `main.py` after you personalize your email login information and clipboard of stocks to use
 
