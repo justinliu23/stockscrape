@@ -18,7 +18,7 @@
   2. Open Windows Task Scheduler to [schedule a new task](https://windowsreport.com/schedule-tasks-windows-10/) with the generated .exe file in the Actions tab - scheduling other parts of the task are based on personal preferences
   
 ## viewer.py
-* Personalize a clipboard of stocks to quickly and easily view their prices (refer to line 11 for example)
+* Personalize a clipboard of stocks to quickly and easily view their prices (refer to line 10 for example)
 
 * To view any stock's price, simply enter the stock's symbol
 
