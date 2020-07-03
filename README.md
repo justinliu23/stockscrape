@@ -1,8 +1,7 @@
 # Stock Manager
-
 * Personalize a clipboard of stocks to track based on [Yahoo! Finance](https://finance.yahoo.com/) with 2 steps:
   1. Create a CSV file (Excel recommended), name it "Stocks Clipboard.csv", and refer to `Stocks Clipboard.csv` for formatting 
-  2. Create a CSV file (Excel recommended), name it "Notifying Email Acconts.csv", and refer to `Notifying Email Acconts.csv` for formatting
+  2. Create a CSV file (Excel recommended), name it "Notifying Email Accounts.csv", and refer to `Notifying Email Accounts.csv` for formatting
 
 * Receive notifying emails if a stock on your clipboard falls or rises over 5% of your buying price with 4 steps:
   1. Enable [Google 2-Step Verification](https://support.google.com/accounts/answer/185839?co=GENIE.Platform%3DAndroid&hl=en)
