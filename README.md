@@ -1,4 +1,5 @@
 # Stock Manager
+
 * Personalize a clipboard of stocks to track based on [Yahoo! Finance](https://finance.yahoo.com/) with 2 steps:
   1. Create a CSV file (Excel recommended), name it "Stocks Clipboard.csv", and refer to `Stocks Clipboard.csv` for formatting 
   2. Create a CSV file (Excel recommended), name it "Notifying Email Accounts.csv", and refer to `Notifying Email Accounts.csv` for formatting
