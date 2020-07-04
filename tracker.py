@@ -7,10 +7,10 @@ fallen_price_factor = 0.95
 risen_price_factor = 1.05
 percentage_factor = 100
 
-stocks_clipboard_file = open('C:\\Users\\justi\\OneDrive\\Documents\\Software\\Python\\PycharmProjects\\Price Checkers\\Stocks\\stock-tracker\\Stocks Clipboard.csv', 'r')
+stocks_clipboard_file = open('INSERT YOUR FILE PATH FOR THE STOCKS CLIPBOARD HERE', 'r')
 stocks_clipboard_reader = csv.reader(stocks_clipboard_file)
 
-emails_file = open('C:\\Users\\justi\\OneDrive\\Documents\\Software\\Python\\PycharmProjects\\Price Checkers\\Stocks\\stock-tracker\\Notifying Email Accounts.csv', 'r')
+emails_file = open('INSERT YOUR FILE PATH FOR THE NOTIFYING EMAIL ACCOUNTS HERE', 'r')
 emails_reader = csv.reader(emails_file)
 
 receiving_emails = []
