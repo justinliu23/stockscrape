@@ -9,6 +9,7 @@
 * **Receive notifying emails** if a stock on your clipboard falls or rises over **5%** of your buying price with 4 steps:
   1. Enable [Google 2-Step Verification](https://support.google.com/accounts/answer/185839?co=GENIE.Platform%3DAndroid&hl=en)
   2. Generate a [Google App Password](https://support.google.com/accounts/answer/185833?hl=en) for your Gmail account
+  3. Insert your generated Gmail App Password where designated (refer to `Notifying Email Accounts.csv`)
   
 * *Run `main.py` after you've properly personalized your CSV control files and setup your Gmail Account*
 
