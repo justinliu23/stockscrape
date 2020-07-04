@@ -1,10 +1,8 @@
 # Stock Tracker
 
 * Personalize a clipboard of stocks to track based on [Yahoo! Finance](https://finance.yahoo.com/) with 3 steps:
-  1. Create a CSV file to store your stocks and their buying prices
-    * When formatting/personalizing (Excel recommended), refer to `Stocks Clipboard.csv`
-  2. Create a CSV file to store your notifying email accounts, open it (Excel recommended)
-    * When formatting/personalizing (Excel recommended), refer to `Notifying Email Accounts.csv`
+  1. Create a CSV file to serve as your stocks clipboard and when formatting/personalizing (Excel recommended), refer to `Stocks Clipboard.csv`
+  2. Create a CSV file to store your notifying email accounts and when formatting/personalizing (Excel recommended), refer to `Notifying Email Accounts.csv`
   3. Open tracker.py and insert the file path of your stocks clipboard and notifying email accounts CSV files with directories seperated by '\\' (ex. C:\\Users\\John\\Stocks Clipboard.csv) where designated at lines 10 and 13, respectively
 
 * Receive notifying emails if a stock on your clipboard falls or rises over 5% of your buying price with 4 steps:
