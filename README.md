@@ -3,8 +3,8 @@
 * **Personalize a clipboard of stocks to track** based on [Yahoo! Finance](https://finance.yahoo.com/) with 4 steps:
   1. *Create* a CSV file to serve as your stocks clipboard and when personalizing your stocks info (Excel recommended), refer to `Stocks Clipboard.csv`
   2. *Create* a CSV file to store your notifying email accounts and when personalizing your email info (Excel recommended), refer to `Notifying Email Accounts.csv`
-  3. *Open* `tracker.py` and insert the file path of your stocks clipboard CSV file with directories seperated by **'\\\\'**             (ex. *C:\\\\Users\\\\John\\\\Stocks Clipboard.csv*) where designated at line 10
-  4. Open `tracker.py` and insert the file path of your notifying email accounts CSV file with directories seperated by **'\\\\'**       (ex. *C:\\\\Users\\\\John\\\\Notifying Email Accounts.csv*) 
+  3. *Open* `tracker.py` and insert the file path of your stocks clipboard CSV file with directories seperated by **'\\\\'** where designated at line 10 (ex. *C:\\\\Users\\\\John\\\\Stocks Clipboard.csv*) 
+  4. Open `tracker.py` and insert the file path of your notifying email accounts CSV file with directories seperated by **'\\\\'** where designated at line 13 (ex. *C:\\\\Users\\\\John\\\\Notifying Email Accounts.csv*) 
   
 * **Receive notifying emails** if a stock on your clipboard falls or rises over **5%** of your buying price with 4 steps:
   1. *Enable* [Google 2-Step Verification](https://support.google.com/accounts/answer/185839?co=GENIE.Platform%3DAndroid&hl=en)
