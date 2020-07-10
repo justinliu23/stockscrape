@@ -3,7 +3,7 @@
 * **Personalize a clipboard of stocks to track via CSV control files** with 3 steps:
   1. Create a CSV file (opening w/ Excel recommended) to keep track of desired stocks 
   2. Create a CSV file (opening w/ Excel recommended) to store email information
-  3. Refer to `Stocks Clipboard.csv` and personalize your stocks (case-insensitve), ranges (percent signs optional), and buying prices (dollar signs optional); blank spaces will be ignored and marked as "N/A"
+  3. Refer to `Stocks Clipboard.csv` and only personalize your stocks (case-insensitve), ranges (percent signs optional), and buying prices (dollar signs optional); blank spaces will be ignored and marked as "N/A"
   4. Open `tracker.py` and insert the file paths of your stocks clipboard, temporary stocks clipboard (required for updating the clipboard), and email information where designated at lines 14, 15, and 16, respectively
   
 * **Receive notifying emails if a stock on your clipboard falls or rises over the user-defined range from the buying price** with 4 steps:
