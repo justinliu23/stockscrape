@@ -11,12 +11,9 @@ DEFAULT_RISEN_PRICE_FACTOR = 1.05
 DEFAULT_RANGE_PERCENT = 5.0
 SMTP_PORT = 587
 
-STOCKS_CLIPBOARD_PATH      = r'C:\Users\justi\OneDrive\Documents\Software\Python\PycharmProjects\Price Checkers' \
-                             r'\Stocks\stock-tracker\Stocks Clipboard.csv'
-STOCKS_CLIPBOARD_TEMP_PATH = r'C:\Users\justi\OneDrive\Documents\Software\Python\PycharmProjects\Price Checkers' \
-                             r'\Stocks\stock-tracker\Temporary Stocks Clipboard.csv'
-EMAILS_INFO_FILE_PATH      = r'C:\Users\justi\OneDrive\Documents\Software\Python\PycharmProjects\Price Checkers' \
-                             r'\Stocks\stock-tracker\Notifying Email Accounts.csv'
+STOCKS_CLIPBOARD_PATH      = r'Insert your stocks clipboard file path here'
+STOCKS_CLIPBOARD_TEMP_PATH = r'Insert your stocks clipboard temporary file path here'
+EMAILS_INFO_FILE_PATH      = r'Insert your notifying email accounts file path here'
 
 stocks_readable_file = open(STOCKS_CLIPBOARD_PATH, 'r')
 stocks_reader = csv.DictReader(stocks_readable_file)
