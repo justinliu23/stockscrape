@@ -1,17 +1,17 @@
 # Stock Tracker
 
-* **Personalize a user-friendly clipboard of stocks to track via CSV control files** with 3 steps:
-  1. Create a CSV file to serve as your stocks clipboard and when personalizing your stocks (Excel recommended), refer to `Stocks Clipboard.csv`
-  2. Create a CSV file to store your notifying email accounts and when personalizing your emails (Excel recommended), refer to `Notifying Email Accounts.csv`
-  3. Open `tracker.py` and insert the file path of your stocks clipboard, a temporary stocks clipboard (required for updating the clipboard), and notifying email accounts CSV files where designated at lines 14, 15, and 16, respectively
+* **Personalize a clipboard of stocks to track via CSV control files** with 3 steps:
+  1. Create a CSV file (opening w/ Excel recommended) to serve as your stocks clipboard and personalize your stocks (refer to `Stocks Clipboard.csv`)
+  2. Create a CSV file (opening w/ Excel recommended) to store your notifying email accounts and personalize your emails (refer to `Notifying Email Accounts.csv`)
+  3. Open `tracker.py` and insert the CSV file paths of your stocks clipboard, temporary stocks clipboard (required for updating the clipboard), and notifying email accounts where designated at lines 14, 15, and 16, respectively
   
 * **Receive notifying emails if a stock on your clipboard falls or rises over the user-defined range from the buying price** with 4 steps:
   1. Enable [Google 2-Step Verification](https://support.google.com/accounts/answer/185839?co=GENIE.Platform%3DAndroid&hl=en)
   2. Generate a [Google App Password](https://support.google.com/accounts/answer/185833?hl=en) for your Gmail account
   3. Insert your generated Gmail App Password where designated (refer to `Notifying Email Accounts.csv`)
   
-* *Run `main.py` after you've properly personalized your CSV control files and setup your Gmail Account*
+* Run `main.py` after you've properly personalized your CSV control files and setup your Gmail Account
 
 * **Automating `main.py` to notify you via email** requires 2 steps:
-  1. [Convert](https://www.youtube.com/watch?v=UZX5kH72Yx4&list=LLn2A3GlJT_vthodJ8G63-gA&index=3&t=303s) your python script (*.py*) to an executable file (*.exe*)
+  1. [Convert](https://www.youtube.com/watch?v=UZX5kH72Yx4&list=LLn2A3GlJT_vthodJ8G63-gA&index=3&t=303s) your python script to an executable file
   2. Open Windows Task Scheduler to [schedule a new task](https://windowsreport.com/schedule-tasks-windows-10/) with the generated EXE file in the Actions tab - scheduling other parts of the task are based on personal preferences
