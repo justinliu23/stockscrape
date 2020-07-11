@@ -9,7 +9,7 @@
   1. Enable [Google 2-Step Verification](https://support.google.com/accounts/answer/185839?co=GENIE.Platform%3DAndroid&hl=en)
   2. Generate a [Google App Password](https://support.google.com/accounts/answer/185833?hl=en) for your Gmail account
   3. Create a CSV file to store your email information
-  4. Insert your email info and generated Gmail App Password where designated (refer to `Notifying Email Accounts.csv`)
+  4. Insert your email info and Gmail App Password where designated (refer to `Notifying Email Accounts.csv`)
   
 * **Run `main.py`** after you've properly personalized your CSV control files and setup your Gmail Account
 
