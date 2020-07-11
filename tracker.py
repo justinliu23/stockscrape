@@ -93,17 +93,16 @@ def send_email_notification(stock, stock_url, stock_buy_price, stock_current_pri
 
 
 # Updates a specific row from the stocks clipboard
-def update_row(stock, range_percent, stock_buy_price, stock_current_price, stock_percent_change, sent_email, is_buy_price_empty):
-    if sent_email:
+def update_row(stock, range_percent, stock_buy_price, stock_current_price, stock_percent_change, timestamp, sent_email, is_buy_price_empty):
+    if sent_email and is_buy_price_empty is False:
         stocks_writer.writerow({'Stock': stock, 'Range (%)': str(range_percent) + '%', 'Buying': '$' + str(stock_buy_price),
-            'Current': '$' + str(stock_current_price), '% Change': str(stock_percent_change) + '%',
-            'Timestamp': str(datetime.datetime.now())[5:10].replace('0', '').replace('-', '|') + str(datetime.datetime.now())[10:16]})
+            'Current': '$' + str(stock_current_price), '% Change': str(stock_percent_change) + '%', 'Timestamp': str(timestamp)})
     elif sent_email is False and is_buy_price_empty is False:
         stocks_writer.writerow({'Stock': stock, 'Range (%)': str(range_percent) + '%', 'Buying': '$' + str(stock_buy_price),
-             'Current': '$' + str(stock_current_price), '% Change': str(stock_percent_change) + '%'})
+            'Current': '$' + str(stock_current_price), '% Change': str(stock_percent_change) + '%', 'Timestamp': ''})
     else:
         stocks_writer.writerow({'Stock': stock, 'Range (%)': str(range_percent) + '%', 'Buying': str(stock_buy_price),
-             'Current': '$' + str(stock_current_price), '% Change': stock_percent_change})
+             'Current': '$' + str(stock_current_price), '% Change': stock_percent_change, 'Timestamp': ''})
 
 
 # Tracks stocks from a CSV file defined by the user and sends emails if a stock on the clipboard fell or rose over a certain range
@@ -126,16 +125,9 @@ def track_stocks():
         else:
             is_buy_price_empty = False
             stock_buy_price = float(str(row['Buying'].replace(',', '')).lstrip('$'))
-            if stock_buy_price >= 1000:
-                before, sep, after = str(stock_buy_price).partition('.')
-                stock_buy_price = int(before)
 
         stock_url = get_stock_url(stock)
-
         stock_current_price = float(str(get_stock_current_price(stock_url)).replace(',', ''))
-        if stock_current_price >= 1000:
-            before, sep, after = str(stock_current_price).partition('.')
-            stock_current_price = int(before)
 
         if is_buy_price_empty:
             stock_percent_change = 'N/A'
@@ -145,6 +137,9 @@ def track_stocks():
                 stock_percent_change = float(str(stock_percent_change)[:4])
             else:
                 stock_percent_change = float(str(stock_percent_change)[:5])
+
+        before, sep, after = str(datetime.datetime.now()).partition('.')
+        timestamp = before
 
         if is_buy_price_empty is False and stock_current_price < (fallen_price_factor * stock_buy_price):
             send_email_notification(stock, stock_url, stock_buy_price, stock_current_price, stock_percent_change, 'fallen')
@@ -157,7 +152,7 @@ def track_stocks():
         else:
             sent_email = False
 
-        update_row(stock, range_percent, stock_buy_price, stock_current_price, stock_percent_change, sent_email, is_buy_price_empty)
+        update_row(stock, range_percent, stock_buy_price, stock_current_price, stock_percent_change, timestamp, sent_email, is_buy_price_empty)
 
     stocks_readable_file.close()
     stocks_writable_file.close()
