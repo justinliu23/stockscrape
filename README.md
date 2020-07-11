@@ -5,7 +5,7 @@
   2. Refer to `Stocks Clipboard.csv` and only personalize your stocks (case-insensitve), ranges (percent signs optional), and buying prices (dollar signs optional); empty values will be ignored and marked as N/A
   3. Open `tracker.py` and insert the file paths of your stocks clipboard, temporary stocks clipboard (required for updating the clipboard), and email information where designated at lines 14, 15, and 16, respectively
   
-* **Receive notifying emails if a stock on your clipboard falls or rises over the user-defined range from the buying price** with 4 steps:
+* **Receive notifying emails if a stock's buying price falls or rises over a range** with 4 steps:
   1. Enable [Google 2-Step Verification](https://support.google.com/accounts/answer/185839?co=GENIE.Platform%3DAndroid&hl=en)
   2. Generate a [Google App Password](https://support.google.com/accounts/answer/185833?hl=en) for your Gmail account
   3. Create a CSV file to store email information
